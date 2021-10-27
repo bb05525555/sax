@@ -8,7 +8,7 @@ COPY pom.xml .
 COPY src ./src
 
 # Build a release artifact.
-RUN mvn package -DskipTests
+RUN mvn package -DskipTestsspringboot_demo
 
 # Run the web service on container startup.
 CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dserver.port=8080","-jar","/app/target/springboot_demo-1.0-SNAPSHOT-boot.jar"]
